@@ -1,43 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AUTOBRO-TRADE - Автомобили под заказ из Японии, Кореи, Китая</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-wrapper">
-                <div class="header-right">
-                    <h1>AUTO<span class="h1p2">BRO-TRADE</span> </h1>
-                </div>
-                <div class="header-center">
-                    <nav>
-                        <ul>
-                            <a href="#"><li>О компании</li></a>
-                            <a href="#"><li>Схема работы</li></a>
-                            <a href="#"><li>Калькулятор</li></a>
-                            <a href="#"><li>Контакты</li></a>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header-left">
-                    <a href="">+7 995 434-47-77</a>
-                    <img src="" alt="">
-                </div>
-            </div>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    
+  <!-- Header -->
+  <header class="w-full z-50 bg-gray-900 border-b border-gray-800">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold logo-text">AUTOBRO-TRADE</h1>
         </div>
-    </header>
-    <main>
-        <div class="container">
-            <div class="main-content">
-                <h1>АВТОМОБИЛИ ПОД ЗАКАЗ ИЗ: ЯПОНИИ <span><img src="https://ap-northeast-1.graphassets.com/A2vZcUHoTGwCoNTeYtWcAz/uCClxE36T2GuZVZAskgY" alt="JP.svg" title="JP.svg" width="undefined" height="undefined"></span>
-                 Ю.КОРЕИ <span><img src="https://ap-northeast-1.graphassets.com/A2vZcUHoTGwCoNTeYtWcAz/q1MDfBG2TmqbIqtlBPgE" alt="SK.svg" title="SK.svg" width="undefined" height="undefined"></span>
-                  КИТАЯ <span><img src="https://ap-northeast-1.graphassets.com/A2vZcUHoTGwCoNTeYtWcAz/yK2IqFmmRNCEn36hheUe" alt="CH.svg" title="CH.svg" width="undefined" height="undefined"></span> С ДОСТАВКОЙ ПО ВСЕЙ РФ <span><img src="https://ap-northeast-1.graphassets.com/A2vZcUHoTGwCoNTeYtWcAz/BEMJmLLoTICNFBfJtKF5" alt="RUS.svg" title="RUS.svg" width="undefined" height="undefined"></span></h1>
-            </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#about" class="nav-item font-medium">О компании</a>
+          <a href="#process" class="nav-item font-medium">Схема работы</a>
+          <a href="#calculator" class="nav-item font-medium">Калькулятор</a>
+          <a href="#contacts" class="nav-item font-medium">Контакты</a>
+        </nav>
+
+        <!-- Phone -->
+        <div class="flex items-center">
+          <a href="tel:+79954344777" class="phone-btn flex items-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            +7 995 434-47-77
+          </a>
         </div>
-    </main>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+    <div class="container mx-auto px-6 pt-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div class="space-y-8">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            АВТОМОБИЛИ ПОД ЗАКАЗ ИЗ:
+            <br />
+            <span class="flex items-center flex-wrap mt-4">ЯПОНИИ <span class="flag-emoji">🇯🇵</span></span><span class="flex items-center flex-wrap">Ю.КОРЕИ <span class="flag-emoji">🇰🇷</span> КИТАЯ <span class="flag-emoji">🇨🇳</span></span>
+            <span class="flex items-center flex-wrap mt-4">С ДОСТАВКОЙ ПО ВСЕЙ РФ <span class="flag-emoji">🇷🇺</span></span>
+          </h1>
+          <p class="text-xl text-gray-300 max-w-2xl leading-relaxed">
+            Делаем процесс покупки максимально честным, простым и прозрачным. Полное сопровождение и поддержка от заявки до выдачи автомобиля
+          </p>
+          <button class="btn-order px-8 py-4 rounded-full text-white font-bold text-lg flex items-center">
+            Заказать
+          </button>
+        </div>
+
+        <!-- Cars Image -->
+        <div class="cars-container relative">
+          <!-- <img src="./image/main-image.jpg" alt="Автомобили под заказ" class="w-full h-auto max-w-3xl mx-auto car-shadow" /> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Background Section без карточек -->
+  <section class="min-h-screen bg-cover bg-center bg-no-repeat relative" style="background-image: url('fSutBv7tCKo3l1l_QemSP');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    
+    <div class="relative z-10 container mx-auto px-6 py-12">
+      
+      <!-- Statistics section -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-20">
+        <div class="text-center text-white">
+          <div class="flex items-center justify-center mb-4">
+            <span class="text-orange-500 text-4xl mr-4">▶</span>
+            <span class="text-6xl md:text-7xl font-bold">5 ЛЕТ</span>
+          </div>
+          <p class="text-xl font-semibold uppercase leading-tight">
+            УСПЕШНО ВОЗИМ<br>
+            АВТОМОБИЛИ ПОД<br>
+            ЗАКАЗ
+          </p>
+        </div>
+        
+        <div class="text-center text-white">
+          <div class="flex items-center justify-center mb-4">
+            <span class="text-orange-500 text-4xl mr-4">▶</span>
+            <span class="text-6xl md:text-7xl font-bold">2100</span>
+          </div>
+          <p class="text-xl font-semibold uppercase leading-tight">
+            ЕДИНИЦ ТЕХНИКИ<br>
+            БЫЛО КУПЛЕНО
+          </p>
+        </div>
+        
+        <div class="text-center text-white">
+          <div class="flex items-center justify-center mb-4">
+            <span class="text-orange-500 text-4xl mr-4">▶</span>
+            <span class="text-6xl md:text-7xl font-bold">2000</span>
+          </div>
+          <p class="text-xl font-semibold uppercase leading-tight">
+            ДОВОЛЬНЫХ КЛИЕНТОВ<br>
+            ПО ВСЕЙ РФ
+          </p>
+        </div>
+      </section>
+
+      <!-- Bottom section -->
+      <div class="text-left">
+        <h3 class="text-orange-500 text-xl font-bold uppercase tracking-wider">
+          СХЕМА РАБОТЫ
+        </h3>
+      </div>
+    </div>
+  </section>
+
+  <main id="delivered-cars" class="py-16 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-4xl font-bold">ДОСТАВЛЕННЫЕ АВТО</h2>
+    </div>
+
+    <!-- Swiper -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Слайд 1 -->
+        <div class="swiper-slide">
+          <div class="min-w-[320px] bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="aspect-video bg-gray-700">
+              <img src="https://dummyimage.com/600x400/222/fff&text=Toyota+Land+Cruiser+Prado" alt="Toyota" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">TOYOTA LAND CRUISER PRADO</h3>
+              <p class="text-gray-300 text-sm mb-4">2020 г., 2700 сс, TXL, из Японии, г. Уссурийск</p>
+              <p class="text-2xl font-bold">3 500 000 <span class="text-lg">₽</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Слайд 2 -->
+        <div class="swiper-slide">
+          <div class="min-w-[320px] bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="aspect-video bg-gray-700">
+              <img src="https://dummyimage.com/600x400/222/fff&text=Lexus+RX200t" alt="Lexus RX200t" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">LEXUS RX200T</h3>
+              <p class="text-gray-300 text-sm mb-4">2017 г., 2000 сс, Fsport, из Японии, г. Владивосток</p>
+              <p class="text-2xl font-bold">3 300 000 <span class="text-lg">₽</span></p>
+            </div>
+          </div>
+        </div>
+           <!-- Слайд 2 -->
+        <div class="swiper-slide">
+          <div class="min-w-[320px] bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="aspect-video bg-gray-700">
+              <img src="https://dummyimage.com/600x400/222/fff&text=Lexus+RX200t" alt="Lexus RX200t" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">LEXUS RX200T</h3>
+              <p class="text-gray-300 text-sm mb-4">2017 г., 2000 сс, Fsport, из Японии, г. Владивосток</p>
+              <p class="text-2xl font-bold">3 300 000 <span class="text-lg">₽</span></p>
+            </div>
+          </div>
+        </div>
+           <!-- Слайд 2 -->
+        <div class="swiper-slide">
+          <div class="min-w-[320px] bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="aspect-video bg-gray-700">
+              <img src="https://dummyimage.com/600x400/222/fff&text=Lexus+RX200t" alt="Lexus RX200t" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">LEXUS RX200T</h3>
+              <p class="text-gray-300 text-sm mb-4">2017 г., 2000 сс, Fsport, из Японии, г. Владивосток</p>
+              <p class="text-2xl font-bold">3 300 000 <span class="text-lg">₽</span></p>
+            </div>
+          </div>
+        </div>
+           <!-- Слайд 2 -->
+        <div class="swiper-slide">
+          <div class="min-w-[320px] bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+            <div class="aspect-video bg-gray-700">
+              <img src="https://dummyimage.com/600x400/222/fff&text=Lexus+RX200t" alt="Lexus RX200t" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">LEXUS RX200T</h3>
+              <p class="text-gray-300 text-sm mb-4">2017 г., 2000 сс, Fsport, из Японии, г. Владивосток</p>
+              <p class="text-2xl font-bold">3 300 000 <span class="text-lg">₽</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-12 border-t border-gray-800">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold logo-text mb-4">AUTOBRO-TRADE</h3>
+          <p class="text-gray-400">Ваш надежный партнер в покупке автомобилей из Азии</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Услуги</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#">Автомобили из Японии</a></li>
+            <li><a href="#">Автомобили из Кореи</a></li>
+            <li><a href="#">Автомобили из Китая</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Информация</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Схема работы</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Контакты</h4>
+          <p class="text-gray-400">+7 995 434-47-77</p>
+          <p class="text-gray-400">info@autobro-trade.ru</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2024 AUTOBRO-TRADE. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    });
+  </script>
+  <script src="./js.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>

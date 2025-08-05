@@ -1,54 +1,121 @@
-* {
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    list-style: none;
+body {
+  font-family: 'Inter', sans-serif;
 }
 
-.container {
-    width: 1200px;
-    margin: 0 auto;
+.hero-bg {
+  background: url('./image/main-image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
 }
 
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 35px;
+.logo-text {
+  background: linear-gradient(45deg, #ef4444, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.header-center ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+.btn-order {
+  background: linear-gradient(45deg, #dc2626, #ef4444);
 }
 
-.h1p2 {
-    color: red;
+.phone-btn {
+  background: #dc2626;
+  border-radius: 50px;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 600;
 }
 
-h1 {
-    color: white;
+.nav-item {
+  position: relative;
 }
 
-.header-center a {
-    text-decoration: none;
-    color: white;
+.flag-emoji {
+  font-size: 2rem;
+  margin: 0 10px;
 }
 
-.header-left a {
-    text-decoration: none;
-    color: white;
+.cars-container {
+  position: relative;
+  z-index: 10;
 }
 
-header{
-    background: url(./image/main-image.jpg);
-    background-size: cover;
-    height: 90vh;
+.car-shadow {
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
 }
 
-.main-content {
-    display: flex;
-    align-items: center;
-    margin-top: -40rem;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+.animate-fade-up {
+  animation: fadeUp 1.2s ease-out both;
+}
+
+section {
+    background: url('./image//bg-image-4.1b9ee61e.jpg');
+}
+
+        .swiper-container {
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .swiper-wrapper {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+        
+        .swiper-slide {
+            flex: 0 0 auto;
+            margin-right: 24px;
+        }
+        
+        .car-card {
+            background: #1a1a1a;
+            border-radius: 16px;
+            overflow: hidden;
+            width: 400px;
+            transition: transform 0.3s ease;
+        }
+        
+        .car-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .nav-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .nav-button svg {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        
+        .price-accent {
+            color: #ff4444;
+        }
